@@ -1,0 +1,26 @@
+// Color information
+@use '../colors' as *
+
+.navbar
+    background-color: $dark-background
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 18px 0
+    &__logo
+        font-size: 24px
+        color: $white-text
+    &__link
+        // padding-top: 10px
+        // padding-bottom: 10px
+        font-size: 18px
+        margin-left: 32px
+        text-decoration: none
+        color: $white-text
+        &:hover
+            color: $blue
+            border-bottom: 1px solid $blue
+            transition: 0.2s
+            
+    

@@ -1,0 +1,32 @@
+// Color information
+@use "colors" as *
+
+.container
+    max-width: 70rem
+    margin-left: auto
+    margin-right: auto
+    padding: 0 32px
+
+@media (max-width: 1024px)
+    .container
+        padding: 0 24px
+
+html
+    font-size: 16px
+    font-family: 'TT Commons Regular'
+
+.button
+    color: $white-text
+    text-decoration: none
+    font-size: 18px
+    height: 35px
+    width: 120px
+    background-color: $blue
+    border-radius: 5px
+    border: none
+    padding-top: 5px
+    &:hover
+        cursor: pointer
+        border: 2px solid $white-text
+    
+        
