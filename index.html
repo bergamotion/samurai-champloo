@@ -17,8 +17,8 @@
                     HEADER LOGO
                 </div>
                 <div class="navbar__links-container">
-                    <a href="#" class="navbar__link">Link one</a>
-                    <a href="#" class="navbar__link">Link two</a>
+                    <a href="#" class="navbar__link">Opening</a>
+                    <a href="#characters" class="navbar__link"">Characters</a>
                     <a href="#" class="navbar__link">Link three</a>
                 </div>
             </div>
@@ -50,8 +50,37 @@
             </div>
         </div>
     </main>
-    <section class="characters">
-    
+    <section class="characters" id="characters">
+        <div class="container">
+            <h2>Main characters</h2>
+            <div class="characters__wrapper">
+                <figure class="characters__item">
+                    <img src="../images/mugen.jpg" alt="" class="characters__pic">
+                    <figcaption class="characters__name">Mugen</figcaption>
+                </figure>
+                <figure class="characters__item">
+                    <img src="../images/jin.jpg" alt="" class="characters__pic">
+                    <figcaption class="characters__name">Jin</figcaption>
+                </figure>
+                <figure class="characters__item">
+                    <img src="../images/fuu.jpg" alt="" class="characters__pic">
+                    <figcaption class="characters__name">Fuu</figcaption>
+                </figure>
+            </div>
+        </div>
     </section>
+    <section style="height: 3000px; background-color: cyan"></section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
 </body>
 </html>
