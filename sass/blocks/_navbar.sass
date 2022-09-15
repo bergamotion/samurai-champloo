@@ -7,10 +7,7 @@
         display: flex
         align-items: center
         justify-content: space-between
-        padding: 18px 0
-    &__logo
-        font-size: 24px
-        color: $white-text
+        padding: 18px 0       
     &__link
         // padding-top: 10px
         // padding-bottom: 10px
@@ -19,8 +16,23 @@
         text-decoration: none
         color: $white-text
         &:hover
-            color: $blue
-            border-bottom: 1px solid $blue
+            color: $primary
+            border-bottom: 1px solid $primary
             transition: 0.2s
-            
+    &__logo-text
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        text-decoration: none
+        font-size: 32px
+        color: $white-text
+    &__logo-img
+        max-width: 40px
+        margin-left: 10px
+    &__logo:hover
+        .navbar__logo-img
+            transform: rotate(90deg)
+            transition: 0.4s
+        
+
     

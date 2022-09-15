@@ -14,19 +14,24 @@
         <div class="container">
             <div class="navbar__wrapper">
                 <div class="navbar__logo">
-                    HEADER LOGO
+                    <a href="index.html" class="navbar__logo-text">
+                        Samurai Champloo
+                        <img src="../images/sunflower-icon.png" alt="" class="navbar__logo-img">
+                    </a>
                 </div>
                 <div class="navbar__links-container">
-                    <a href="#" class="navbar__link">Opening</a>
+                    <a href="#hero" class="navbar__link">Opening</a>
                     <a href="#characters" class="navbar__link"">Characters</a>
                     <a href="#" class="navbar__link">Link three</a>
                 </div>
             </div>
         </div>
     </nav>
+
     <div class="hero-bg">
     </div>
-    <main class="hero">
+    
+    <main class="hero"  id="hero">
         <div class="container">
             <div class="hero__wrapper">
                 <div class="hero__text-container">
@@ -50,6 +55,7 @@
             </div>
         </div>
     </main>
+
     <section class="characters" id="characters">
         <div class="container">
             <h2>Main characters</h2>
@@ -69,7 +75,18 @@
             </div>
         </div>
     </section>
-    <section style="height: 3000px; background-color: cyan"></section>
+
+    <section class="quote">
+        <div class="container">
+            <div class="quote__wrapper">
+                <blockquote class="quote__text">
+                    They say 'there’s always room for dessert', but for me,
+                    it’s more like 'there’s always room if someone else is paying'.
+                <span class="quote__author">- Fuu Kasumi, 'Samurai Champloo.'</span>
+                </blockquote>
+            </div>
+        </div>
+    </section>
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

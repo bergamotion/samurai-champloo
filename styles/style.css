@@ -1,19 +1,11 @@
 @font-face {
-  font-family: "TT Commons Regular";
-  src: url("../fonts/TTCommons-Regular.eot");
-  src: url("../fonts/TTCommons-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTCommons-Regular.woff") format("woff"), url("../fonts/TTCommons-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Commons ExtraBold";
-  src: url("../fonts/TTCommons-ExtraBold.eot");
-  src: url("../fonts/?#iefix") format("embedded-opentype"), url("../fonts/TTCommons-ExtraBold.woff") format("woff"), url("../fonts/TTCommons-ExtraBold.ttf") format("truetype");
+  font-family: "Edo sz";
+  src: url("../fonts/edosz.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 .container {
-  max-width: 70rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   padding: 0 32px;
@@ -26,7 +18,7 @@
 }
 html {
   font-size: 16px;
-  font-family: "TT Commons Regular";
+  font-family: "Edo sz", sans-serif;
 }
 
 .button {
@@ -35,10 +27,9 @@ html {
   font-size: 18px;
   height: 35px;
   width: 120px;
-  background-color: #3882f6;
+  background-color: rgb(204, 46, 0);
   border-radius: 5px;
   border: none;
-  padding-top: 5px;
 }
 .button:hover {
   cursor: pointer;
@@ -54,10 +45,6 @@ html {
   justify-content: space-between;
   padding: 18px 0;
 }
-.navbar__logo {
-  font-size: 24px;
-  color: #f9faf8;
-}
 .navbar__link {
   font-size: 18px;
   margin-left: 32px;
@@ -65,9 +52,25 @@ html {
   color: #f9faf8;
 }
 .navbar__link:hover {
-  color: #3882f6;
-  border-bottom: 1px solid #3882f6;
+  color: rgb(204, 46, 0);
+  border-bottom: 1px solid rgb(204, 46, 0);
   transition: 0.2s;
+}
+.navbar__logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  font-size: 32px;
+  color: #f9faf8;
+}
+.navbar__logo-img {
+  max-width: 40px;
+  margin-left: 10px;
+}
+.navbar__logo:hover .navbar__logo-img {
+  transform: rotate(90deg);
+  transition: 0.4s;
 }
 
 .hero {
@@ -80,7 +83,7 @@ html {
   justify-content: space-between;
   padding: 40px 30px;
   border-radius: 10px;
-  background-color: rgba(31, 41, 55, 0.7);
+  background-color: rgba(31, 41, 55, 0.9);
 }
 .hero__text {
   color: #d6d7da;
@@ -92,12 +95,12 @@ html {
   margin-top: 30px;
 }
 .hero__image {
+  border-radius: 10px;
   max-width: 100%;
 }
 .hero h1 {
   margin: 0;
   font-size: 48px;
-  font-family: "TT Commons ExtraBold";
 }
 
 @media (max-width: 900px) {
@@ -133,7 +136,7 @@ html {
   background-image: url(../images/champloo-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   z-index: -1;
 }
 
@@ -144,7 +147,6 @@ html {
 }
 .characters h2 {
   font-size: 32px;
-  font-family: "TT Commons ExtraBold";
   margin: 0;
   text-align: center;
 }
@@ -164,7 +166,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  border: 2px solid #3882f6;
+  border: 4px solid #f9faf8;
 }
 .characters__name {
   margin-top: 15px;
@@ -184,5 +186,39 @@ html {
   }
   .characters__item:last-of-type {
     margin-bottom: 0;
+  }
+}
+.quote {
+  padding: 60px 0;
+  background-color: rgb(203, 180, 126);
+}
+.quote__text {
+  margin: 0;
+  font-size: 28px;
+}
+.quote__wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+.quote__author {
+  margin-top: 10px;
+  display: block;
+  text-align: right;
+  font-size: 18px;
+  color: #3d3d3d;
+}
+
+@media (max-width: 730px) {
+  .quote {
+    padding: 40px;
+  }
+  .quote__wrapper {
+    max-width: 80%;
+  }
+  .quote__text {
+    font-size: 22px;
+  }
+  .quote__author {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
