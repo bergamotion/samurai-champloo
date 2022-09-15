@@ -1,0 +1,28 @@
+// Color information
+@use '../colors' as *
+    
+.quote
+    padding: 60px 0
+    background-color: rgb(203, 180, 126)
+    &__text
+        margin: 0
+        font-size: 28px
+    &__wrapper
+        max-width: 70%
+        margin: 0 auto
+    &__author
+        margin-top: 10px
+        display: block
+        text-align: right
+        font-size: 18px
+        color: #3d3d3d
+
+@media (max-width: 730px)
+    .quote
+        padding: 40px
+        &__wrapper
+            max-width: 80%
+        &__text
+            font-size: 22px
+        &__author
+            font-size: 16px
