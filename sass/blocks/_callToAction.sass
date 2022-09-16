@@ -1,0 +1,40 @@
+// Color information
+@use "../colors" as *
+
+.callToAction
+    background-color: $dark-background
+    padding: 40px 0
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 10px
+        margin: 0 auto
+        padding: 40px 30px
+        max-width: 85%
+        border-radius: 10px
+        background-color: $primary
+    &__header
+        font-size: 24px
+        margin: 0
+    &__text
+        margin: 10px 0 0
+    &__btn
+        border: 2px solid $white-text
+        &:hover
+            color: $primary
+            background-color: $white-text
+            transition: 0.1s
+
+@media (max-width: 512px)
+    .callToAction
+        &__wrapper
+            flex-direction: column
+            align-items: center
+            text-align: center
+            padding: 30px 20px
+
+        &__btn
+            margin-top: 15px
+            width: 90%
+     

@@ -3,7 +3,10 @@
     
 .quote
     padding: 60px 0
-    background-color: rgb(203, 180, 126)
+    background-image: url(../images/texture2.jpg) 
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
     &__text
         margin: 0
         font-size: 28px
@@ -19,9 +22,7 @@
 
 @media (max-width: 730px)
     .quote
-        padding: 40px
-        &__wrapper
-            max-width: 80%
+        padding: 40px 0
         &__text
             font-size: 22px
         &__author

@@ -33,7 +33,6 @@ html {
 }
 .button:hover {
   cursor: pointer;
-  border: 2px solid #f9faf8;
 }
 
 .navbar {
@@ -69,7 +68,7 @@ html {
   margin-left: 10px;
 }
 .navbar__logo:hover .navbar__logo-img {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   transition: 0.4s;
 }
 
@@ -93,6 +92,9 @@ html {
 }
 .hero__button {
   margin-top: 30px;
+}
+.hero__button:hover {
+  border: 2px solid #f9faf8;
 }
 .hero__image {
   border-radius: 10px;
@@ -152,8 +154,10 @@ html {
 }
 .characters__wrapper {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 90%;
 }
 .characters__item {
   margin: 0;
@@ -190,7 +194,10 @@ html {
 }
 .quote {
   padding: 60px 0;
-  background-color: rgb(203, 180, 126);
+  background-image: url(../images/texture2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .quote__text {
   margin: 0;
@@ -210,15 +217,55 @@ html {
 
 @media (max-width: 730px) {
   .quote {
-    padding: 40px;
-  }
-  .quote__wrapper {
-    max-width: 80%;
+    padding: 40px 0;
   }
   .quote__text {
     font-size: 22px;
   }
   .quote__author {
     font-size: 16px;
+  }
+}
+.callToAction {
+  background-color: #1f2937;
+  padding: 40px 0;
+}
+.callToAction__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  max-width: 85%;
+  border-radius: 10px;
+  background-color: rgb(204, 46, 0);
+}
+.callToAction__header {
+  font-size: 24px;
+  margin: 0;
+}
+.callToAction__text {
+  margin: 10px 0 0;
+}
+.callToAction__btn {
+  border: 2px solid #f9faf8;
+}
+.callToAction__btn:hover {
+  color: rgb(204, 46, 0);
+  background-color: #f9faf8;
+  transition: 0.1s;
+}
+
+@media (max-width: 512px) {
+  .callToAction__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .callToAction__btn {
+    margin-top: 15px;
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */
