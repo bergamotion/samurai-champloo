@@ -2,7 +2,9 @@
 @use '../colors' as *
 
 .navbar
+    position: relative
     background-color: $dark-background
+    z-index: 100
     &__wrapper
         display: flex
         align-items: center
@@ -33,6 +35,16 @@
         .navbar__logo-img
             transform: rotate(180deg)
             transition: 0.4s
+@media (max-width: 900px)
+    .navbar
+        &__links-container
+            display: none
+        &__logo-text
+            font-size: 24px
+            max-width: 50%
+        &__logo-img
+            max-width: 40px
+            margin-right: 10px
         
 
     

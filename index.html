@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <title>Samurai Champloo</title>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container">
@@ -22,16 +24,33 @@
                 <div class="navbar__links-container">
                     <a href="#hero" class="navbar__link">Opening</a>
                     <a href="#characters" class="navbar__link"">Characters</a>
-                    <a href="#" class="navbar__link">Link three</a>
+                    <a href=" https://github.com/bergamotion/samurai-champloo" target="_blank" class="navbar__link">
+                        Source
+                    </a>
                 </div>
+                <div class="menu-btn">
+                    <span class="menu-btn__line"></span>
+                    <span class="menu-btn__line"></span>
+                    <span class="menu-btn__line"></span>
+                </div>
+
             </div>
         </div>
     </nav>
 
     <div class="hero-bg">
     </div>
-    
-    <main class="hero"  id="hero">
+
+    <main class="hero" id="hero">
+        <div class="menu">
+            <p class="menu__text"><a href="#hero" class="menu__link">Opening</a></p>
+            <p class="menu__text"><a href="#characters" class="menu__link">Characters</a></p>
+            <p class="menu__text">
+                <a href="https://github.com/bergamotion/samurai-champloo" target="_blank" class="menu__link">
+                    Source
+                </a>
+            </p>
+        </div>
         <div class="container">
             <div class="hero__wrapper">
                 <div class="hero__text-container">
@@ -45,12 +64,11 @@
                         The sons of a battlecry, battlecry <br>
                     </p>
                     <a href="https://genius.com/Nujabes-battlecry-lyrics" target="_blank">
-                       <button class="hero__button button">Full lyrics</button>
+                        <button class="hero__button button">Full lyrics</button>
                     </a>
                 </div>
                 <div class="hero__image-container">
-                    <img src="images/fight.gif"
-                    alt="Battle scene from Samurai Champloo" class="hero__image">
+                    <img src="images/fight.gif" alt="Battle scene from Samurai Champloo" class="hero__image">
                 </div>
             </div>
         </div>
@@ -82,7 +100,7 @@
                 <blockquote class="quote__text">
                     They say 'there’s always room for dessert', but for me,
                     it’s more like 'there’s always room if someone else is paying'.
-                <span class="quote__author">- Fuu Kasumi, 'Samurai Champloo.'</span>
+                    <span class="quote__author">- Fuu Kasumi, 'Samurai Champloo.'</span>
                 </blockquote>
             </div>
         </div>
@@ -99,10 +117,10 @@
                         over there!
                     </p>
                 </div>
-                
-                    <a href="https://www.youtube.com/watch?v=wLkfz10Srxw" target="_blank" class="callToAction__link">
-                        <button class="button callToAction__btn">Sign up</button>
-                    </a>
+
+                <a href="https://www.youtube.com/watch?v=wLkfz10Srxw" target="_blank" class="callToAction__link">
+                    <button class="button callToAction__btn">Sign up</button>
+                </a>
             </div>
         </div>
     </section>
@@ -113,14 +131,33 @@
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-});
+
+        const menu = document.querySelector(".menu");
+        const menuBtn = document.querySelector(".menu-btn")
+        const menuItems = document.querySelectorAll(".menu__text");
+        function toggleMenu() {
+            if (menu.classList.contains("menu-show")) {
+                menu.classList.remove("menu-show");
+            } else {
+                menu.classList.add("menu-show");
+            }
+        }
+        menuBtn.addEventListener("click", toggleMenu);
+        menuItems.forEach(
+                function (menuItem) {
+                    menuItem.addEventListener("click", toggleMenu);
+                }
+            );
+
     </script>
 </body>
+
 </html>
