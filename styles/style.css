@@ -172,8 +172,18 @@ html {
   max-width: 100%;
 }
 .hero h1 {
+  display: inline-block;
   margin: 0;
   font-size: 48px;
+}
+.hero__audioControl {
+  margin-bottom: -8px;
+  width: 45px;
+  height: 45px;
+  margin-left: 15px;
+}
+.hero__audioControl:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
@@ -197,9 +207,17 @@ html {
   }
   .hero__text {
     padding-top: 15px;
+    font-size: 18px;
   }
   .hero__button {
     margin-top: 20px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero__audioControl {
+    width: 40px;
+    height: 40px;
   }
 }
 .hero-bg {
