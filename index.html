@@ -56,7 +56,7 @@
         <div class="container">
             <div class="hero__wrapper">
                 <div class="hero__text-container">
-                    <h1>Battlecry</h1><img src="../images/music-tape.png" alt="" class="hero__audioControl pause">
+                    <h1>Battlecry</h1><img src="images/music-tape.png" alt="" class="hero__audioControl pause">
                     <p class="hero__text">
                         Some days, some nights <br>
                         Some live, some die <br>
@@ -159,12 +159,12 @@
         function audioToggle() {
             if (audioBtn.classList.contains("pause")) {
                 audioBtn.classList.remove("pause")
-                audioBtn.setAttribute("src", "../images/music-tapeOff.png")
+                audioBtn.setAttribute("src", "images/music-tapeOff.png")
                 audio.play()
 
             } else {
                 audioBtn.classList.add("pause")
-                audioBtn.setAttribute("src", "../images/music-tape.png")
+                audioBtn.setAttribute("src", "images/music-tape.png")
                 audio.pause()
             }
         }
