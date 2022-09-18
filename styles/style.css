@@ -226,7 +226,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(../images/champloo-bg.jpg);
+  background-image: url(../images/background.webp);
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(0.8);
